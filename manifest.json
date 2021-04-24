@@ -1,0 +1,23 @@
+{
+  "name": "PhViSaver (name subject to change)",
+  "action": {},
+  "manifest_version": 3,
+  "version": "1.0",
+  "description": "Saves your pornhub's videos and represents them as iframes on the additional local web page",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "backgroundScript.js"
+  },
+  "icons": {"128": "/icons/icon_128.png"},
+  "content_scripts": [
+    {
+      "matches": ["https://rt.pornhub.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}

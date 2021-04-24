@@ -1,0 +1,40 @@
+html {
+    background: url('background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 10px;
+    min-height: 100vh;
+}
+h1 {
+    margin: 0;
+}
+.greetings {
+    padding-top: 30px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 85px;
+    font-weight: 700;
+    color: rgb(61, 55, 55);
+}
+.frames-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+}
+.frames {
+    flex-direction: row;
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+iframe {
+    padding-left: 15px;
+    padding-top: 15px;
+}
