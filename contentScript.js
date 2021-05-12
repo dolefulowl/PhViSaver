@@ -2,7 +2,7 @@ function closeTab(event) {
     let currentKey = event.code;
     let theKey;
 
-    // get theKey from the local storage
+    // get theKey from local storage
     chrome.storage.local.get('theKey', function(result){
         theKey = result.theKey;
         // if it's the first run, set the default value for theKey
