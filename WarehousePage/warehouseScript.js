@@ -14,7 +14,7 @@ function setTheNewKey (e) {
 }
 function setTheCurrentKey () {
         chrome.storage.local.get('theKey', function(result) {
-            let theKey = result.theKey[1];
+            const theKey = result.theKey[1];
             theCurrentKey.textContent = theKey;
         });
 }
