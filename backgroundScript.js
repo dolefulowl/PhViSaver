@@ -2,7 +2,7 @@ function showWarehousePage(info, tab) {
     let url = chrome.runtime.getURL("/WarehousePage/index.html");
     chrome.tabs.create({ url });
 }
-chrome.action.onClicked.addListener((tab) => {showWarehousePage();});
+chrome.action.onClicked.addListener((tab) => {showWarehousePage()});
 
 chrome.runtime.onMessage.addListener(
     function(request, sender) {
@@ -14,9 +14,8 @@ chrome.runtime.onMessage.addListener(
 
 
         chrome.tabs.remove(tabId);
-        chrome.storage.local.set({[phId]: timestamp}, function() {
+        chrome.storage.local.set({[timestamp]: phId}, function() {
             console.log('Value is set to ' + phId);
         });
     }
 );
-
