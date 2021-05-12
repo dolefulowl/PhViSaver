@@ -12,7 +12,6 @@ chrome.runtime.onMessage.addListener(
         const parsedUrl = new URL(tabUrl);
         const phId = parsedUrl.searchParams.get("viewkey");
 
-
         chrome.tabs.remove(tabId);
         chrome.storage.local.set({[timestamp]: phId}, function() {
             console.log('Value is set to ' + phId);
