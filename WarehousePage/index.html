@@ -8,13 +8,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-    <title>Warehouse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <title>Document</title>
 </head>
 <body>
-<div class="frames-container">
-    <h1 class="greetings">Кто знает, что ждет нас впереди?</h1>
+<div class="settingsNav btn">
+        <img src="img/settings_icon.png" alt="" width="100px" height="100px">
+</div>
+<div class="container">
+    <div class="header">
+        <h1 class="greetings">Кто знает, что ждет нас впереди?</h1>
+    </div>
     <div class="frames"></div>
 </div>
+<div class="modal">
+    <div class="modal-settings">
+        <div class="modal-settings__text">Ваша текущая клавиша<br>
+            <var class="theKey current"></var>
+            Вы хотите поменять ее на ту, что ниже?
+            <var class="theKey new"></var>
+            <div class="modal-settings__small-text">
+                (нажмите необходимую вам клавишу)
+            </div>
+        </div>
+        <div class="modal-settings__button btn">
+            <img src="img/accept.png" width="30px" height="30px" alt="">
+        </div>
+        <div class="modal-settings__image">
+            <img src="img/settings.png" width="250px" height="400px" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- Script -->
 <script src="warehouseScript.js"></script>
 
 </body>
