@@ -1,5 +1,5 @@
 function closeTab(event) {
-    let currentKey = event.code;
+    const currentKey = event.code;
     let theKey;
 
     // get theKey from local storage
