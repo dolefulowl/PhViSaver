@@ -58,15 +58,19 @@ chrome.storage.local.get(null, function(items) {
     allKeys.forEach(function (timestamp) {
         if(timestamp === 'theKey') {return}
         const phId = items[timestamp]
-        const iframe = `<div class="frame__inner" id="${timestamp}">
-                          <div class="border-frame"><div class="close" data-id="${timestamp}"><img src="img/close-icon.png" alt=""></div></div>
+        const iframe = `<div class="frame" id="${timestamp}">
+                          <div class="border-frame">
+                            <div class="close" data-id="${timestamp}">
+                                <img src="img/close-icon.png" alt="">
+                            </div>
+                          </div>
                           <iframe 
-                          src=\"https://www.pornhub.com/embed/${phId}\" 
-                          frameborder=\"0\"
-                          width=\"340\" 
-                          height=\"220\" 
-                          scrolling=\"no\" 
-                          allowfullscreen>
+                              src=\"https://www.pornhub.com/embed/${phId}\" 
+                              frameborder=\"0\"
+                              width=\"340\" 
+                              height=\"220\" 
+                              scrolling=\"no\" 
+                              allowfullscreen>
                           </iframe>
                       </div>`;
         framesHolder.insertAdjacentHTML('afterbegin',  iframe);
